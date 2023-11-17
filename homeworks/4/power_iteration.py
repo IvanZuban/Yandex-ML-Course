@@ -14,7 +14,7 @@ def get_dominant_eigenvalue_and_eigenvector(data, num_steps):
     x = x / np.linalg.norm(x)
 
     for i in range(num_steps):
-        x = np.dot(data) / np.linalg.norm(data, x) 
+        x = np.dot(data, x) / np.linalg.norm(data, x) 
     
     eigenvalue = np.dot(x.T, np.dot(data, x))
 
